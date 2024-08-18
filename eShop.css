@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap);
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+}
+
+/* Stilizarea pentru header */
+header {
+    background-image: url(images/header-background.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: bottom;
+    background-size: cover;
+    height: 35vw;
+}
+
+header h1 {
+    background-color: #ffffff80;
+    padding: 6vw;
+    font-family: "Berkshire Swash", serif;
+    letter-spacing: 2px;
+    color: #151110;
+    font-size: 6vw;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    margin-top: 15vw;
+    margin-bottom: 15vw;
+    font-size: 6vw;
+}
+
+/* Stilizarea pentru sectiunea principala cu carduri*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 2800px;
+}
+
+.product-card {
+    flex-basis: 350px;
+    margin: 0 auto 70px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.product-badge {
+    width: 20%;
+    background-color: orange;
+    color: white;
+    align-self: flex-end;
+    border-radius: 5px;
+    margin: -10px -10px -19px;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}
+
+.product-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-details h3 {
+    margin-bottom: 0;
+    font-family: "Roboto Slab";
+}
+
+.product-price {
+    font-size: large;
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+.product-price span {
+    font-family: 'Berkshire Swash';        
+    font-size: 35px;
+}
+
+.product-rating {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.product-rating span{
+    color: #f39c12;
+}
+
+.product-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-options .option {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-options .option select {
+    background-color: #e9e9ed;
+    border-radius: 5px;
+    height: 30px;
+    border-right: none;
+    border-bottom: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-size-buttons {
+    display: flex;
+    height: 30px;
+}
+
+.product-size-buttons input {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+}
+
+.product-size-buttons button {
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 30px;
+    cursor: pointer;
+}
+
+.add-to-cart { 
+    cursor: pointer; 
+    padding: 10px;
+    margin-top: 40px; 
+    background-color: #f39c12;
+    border-radius: 5px; 
+    border: none; 
+    color: white;  
+    font-weight: bold; 
+    font-size: 20px;
+    font-family: "Roboto";
+} 
+
+.add-to-cart:hover { 
+    transform: scale(1.02);   
+    background-color: #e5af0e;
+}
+    
+.product-overlay {
+    position: absolute;
+    top: 0;    
+    left: 0;
+    width: 100%;    
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-image:hover .product-overlay {
+    opacity: 1; 
+}
+
+.quick-view {
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
